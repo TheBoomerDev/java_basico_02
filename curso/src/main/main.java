@@ -12,7 +12,6 @@ public class main {
 		largos = (long) entero;
 		cortito = (short) entero;
 		
-		
 		float flotante = 0.21f;
 		double dobles = 0.12124124124;
 		

@@ -35,6 +35,18 @@ public class textos {
 			   
         String dominio = "GOOGLE.com";
         	   dominio = "google.com";
+        	   
+        	   
+     // Strign Format
+      String texto03 = "Hola Mundo:"+ch;
+      String textoBad = "HolMu"+ch+contiene+"o:"+1;
+      
+      String formato = "HolMu%s%so:%s";      
+      String textoFormateado = String.format(formato, ch, contiene, 1 );
+      
+      System.out.println(textoBad);
+      System.out.println(textoFormateado);
+      
 		
 	}
 

@@ -16,7 +16,7 @@ public class main {
 		// No Se Puede por ser abstract
 		// Vehiculo veh = new Vehiculo();
 		
-		Coche car = new Coche();
+		Coche car = new Coche(4, 5);
 		Moto moto = new Moto();
 		Avion avion = new Avion();
 		Barco barco = new Barco();
@@ -28,14 +28,14 @@ public class main {
 		// No hereda de Terrestre
 		// Terrestre tAvion = avion;
 		
-		int puertas = car.numeroPuertas;
-		int ruedas = car.ruedas;
+		int puertas = car.getNumeroPuertas();
+		int ruedas = car.getRuedas();		
 		
 		ruedas = moto.ruedas;
 		
 		// Vehiculo
-		car.seMueve();
-		moto.seMueve();
+		car.moverMe();
+		moto.moverMe();
 		
 		// Terrestre
 		boolean tieneR1 = car.tieneRuedas;

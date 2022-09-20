@@ -2,8 +2,10 @@ package main.herencia;
 
 public abstract class Vehiculo {
 	
-	public void seMueve() {
+	protected void seMueve() {
 		System.out.println("Se mueve");
 	}
+	
+	public abstract boolean moverMe();
 
 }

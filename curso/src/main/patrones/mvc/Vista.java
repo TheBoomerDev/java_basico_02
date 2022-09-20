@@ -10,6 +10,8 @@ public class Vista {
 		if (lista != null) {
 			this.lista = lista;
 		}
+		
+		Tools.getInstance().sortedList(this.lista);
 	}
 	
 	public void show() {

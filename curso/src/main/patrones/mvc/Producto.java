@@ -1,7 +1,8 @@
 package main.patrones.mvc;
- 
 
-public class Producto {
+import java.util.Comparator;
+
+public class Producto implements Comparator<Producto> {
 	
 	private int id = 0;
 	private String name = "";
@@ -33,6 +34,16 @@ public class Producto {
 		prod.precio = p.getPrecio();
 		
 		return prod;
+	}
+	
+	@Override
+	public int compare(Producto o1, Producto o2) {
+		String o1Name = o1.getName();
+		String o2Name = o2.getName();
+		
+		if (o1Name.equals(o2Name)) return 0;
+		
+		return (o1Name.compareTo(o2Name));
 	}
 	
 }

@@ -1,5 +1,8 @@
 package main.patrones.mvc;
 
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 import java.util.Random;
 
 public class Tools {
@@ -25,4 +28,11 @@ public class Tools {
 		return String.format(format, name, rndNum);
 	}
 
+	public <T> List<T> sortedList(List<T> lista){
+  
+		Comparator<T> compa = (Comparator<T>) lista.get(0); 
+		Collections.sort(lista, compa);
+		return lista;
+	}
+	
 }

@@ -32,9 +32,9 @@ public class ProductosModel {
 		Tools tools = Tools.getInstance();
 		
 		ProductosModel producto = new ProductosModel();
-		producto.id = tools.getRandomInt(rndId);
+		producto.id = Math.abs(tools.getRandomInt(rndId));
 		producto.name = tools.getRandomName("Producto");
-		producto.precio = tools.getRandomInt(rndId);
+		producto.precio = Math.abs(tools.getRandomInt(rndId) / 1000);
 		
 		return producto;
 		

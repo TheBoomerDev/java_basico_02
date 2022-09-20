@@ -7,7 +7,10 @@ import java.util.List;
 import java.util.Vector;
 
 public class listas {
-
+	
+	public static void recogerLista(List<String> lista) {
+		lista.add("SS");
+	}
  
 
 	public static void main(String[] args) {

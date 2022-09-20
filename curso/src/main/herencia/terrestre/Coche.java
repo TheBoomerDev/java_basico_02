@@ -40,4 +40,10 @@ public class Coche extends Terrestre {
 				
 		return moto;
 	} 
+	
+	@Override
+	protected void arrancar() { 
+		System.out.println("Giramos la llave del Coche");
+	}
+	
 }

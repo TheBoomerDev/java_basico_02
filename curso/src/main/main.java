@@ -25,6 +25,8 @@ public class main {
 		boolean verdadero = false;
 		byte enteroPequenho = 0;
 		
+		Integer maxValue = Integer.MAX_VALUE;
+		Integer minVAlue = Integer.MIN_VALUE;		
 		
 		
 		// JAVA >= 10
@@ -35,6 +37,10 @@ public class main {
 		variable = [];
 		
 		//*/
+		
+		
+		
+		
 		 
 
 	}

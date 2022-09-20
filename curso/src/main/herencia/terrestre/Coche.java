@@ -31,5 +31,13 @@ public class Coche extends Terrestre {
 		System.out.println("Giro el Volante y a rodar");
 		
 		return true;
+	}
+	
+	
+	public Moto toMoto() {
+		Moto moto = new Moto();
+		moto.ruedas = this.ruedas;
+				
+		return moto;
 	} 
 }

@@ -21,7 +21,7 @@ public class Tardis {
             public void run() {
                listener.clickado(true);
             }
-        }, 0, 3000);
+        }, 3000, 10000);
 		
 	}
 	
@@ -33,7 +33,7 @@ public class Tardis {
             public void run() {
                listener.error("Mensaje de Error");
             }
-        }, 4000, 2500);
+        }, 2500, 4000);
 		
 	}
 	
@@ -43,7 +43,7 @@ public class Tardis {
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-               amount = amount +listener.contador();
+               amount = amount + listener.contador( amount );
                System.out.println("Amount: "+amount);
             }
         }, 0, 3000);

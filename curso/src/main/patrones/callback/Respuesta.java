@@ -6,6 +6,6 @@ public interface Respuesta {
 	
 	void error(String mensaje);
 	
-	int contador();
+	int contador(int currentAmount);
 
 }

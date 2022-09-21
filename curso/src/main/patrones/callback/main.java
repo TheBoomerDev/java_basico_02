@@ -3,13 +3,12 @@ package main.patrones.callback;
 public class main {
 
 	public static void main(String[] args) {
+
 		Respuesta callback = new Respuesta() {
 
 			@Override
-			public void clickado(boolean isClicked) {
-
+			public void clickado(boolean isClicked) { 
 				System.out.println("Clickado: "+isClicked);
-				
 			}
 
 			@Override
@@ -18,8 +17,8 @@ public class main {
 			}
 			
 			@Override
-			public int contador() {
-				return 3;
+			public int contador(int currentAmount) {
+				return (int)(1+currentAmount * 1.212412);
 			}
 		};
 		

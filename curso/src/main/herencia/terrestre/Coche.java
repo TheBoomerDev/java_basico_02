@@ -1,5 +1,8 @@
 package main.herencia.terrestre;
 
+import main.patrones.mvc.ProductosModel;
+import main.patrones.mvc.Tools;
+
 public class Coche extends Terrestre {
 	
 	private int numeroPuertas = 4;
@@ -44,6 +47,26 @@ public class Coche extends Terrestre {
 	@Override
 	protected void arrancar() { 
 		System.out.println("Giramos la llave del Coche");
+	}
+	
+	
+	public static Coche getRandom (int rndId) { 
+		
+		Tools tools = Tools.getInstance();
+
+		int ruedas = tools.getRandomInt(10);
+		int numeroPuertas = Math.abs(tools.getRandomInt(rndId) / 1000);
+		Coche item = new Coche(ruedas, numeroPuertas); 
+		
+		return item;
+		
+	}
+	
+	
+	@Override
+	public String toString() {
+		String format = "C:%s - %s";
+		return String.format(format, this.ruedas, this.numeroPuertas);
 	}
 	
 }

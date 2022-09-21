@@ -17,7 +17,7 @@ public class Tools {
 	
 	public int getRandomInt(int max) {
 		int min = 1; 
-		return (int) (seed.nextInt() *max+min);
+		return (int) (seed.nextInt(max + 1 - min)) ;
 	
 	}
 	

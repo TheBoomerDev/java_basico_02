@@ -32,6 +32,24 @@ public class JavaFind {
 		long elapsedTime = System.nanoTime() - startTime;
 		System.out.println("millis: "+ elapsedTime/1000000);
 		
+		startTime = System.nanoTime();
+		for (int i = 0; i < 100000; i++) {
+			
+			String resS = "";
+			for (String letter : letters) {
+				int idx = letters.indexOf(letter);
+				if (idx <= 0) continue;
+				
+				if (idx % 2 == 0) {
+					resS = letter;
+					break;
+				}
+			}
+			
+		}
+		elapsedTime = System.nanoTime() - startTime;
+		System.out.println("millis: "+ elapsedTime/1000000);
+		
 		
 
 	}

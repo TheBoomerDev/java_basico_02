@@ -1,4 +1,7 @@
 package main.herencia.terrestre;
+ 
+import java.lang.reflect.Field;
+import java.util.HashMap;
 
 import main.patrones.mvc.ProductosModel;
 import main.patrones.mvc.Tools;
@@ -69,4 +72,16 @@ public class Coche extends Terrestre {
 		return String.format(format, this.ruedas, this.numeroPuertas);
 	}
 	
+	
+	public HashMap<String, Object> toMap() throws IllegalArgumentException, IllegalAccessException{
+		HashMap<String, Object> map = new HashMap<String, Object>();
+		for (Field field : Coche.class.getDeclaredFields()) {
+		    // Skip this if you intend to access to public fields only
+		    if (!field.isAccessible()) {
+		        field.setAccessible(true);
+		    }
+		    map.put(field.getName(), field.get(this));
+		}
+		return map;
+	}
 }
